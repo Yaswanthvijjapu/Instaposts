@@ -23,7 +23,7 @@ const PostsPage = () => {
     fetchPosts();
   }, [location.state]);
 
-  const fetchPosts = async (url = 'http://localhost:5000/api/posts') => {
+  const fetchPosts = async (url = 'https://instaposts-8r5m.vercel.app/api/posts') => {
     if (isFetching.current) return;
     isFetching.current = true;
     setLoading(true);

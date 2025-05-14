@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/profile');
+        const response = await axios.get('https://instaposts-8r5m.vercel.app/api/profile');
         setProfile(response.data);
       } catch (err) {
         setError('Failed to load profile');
