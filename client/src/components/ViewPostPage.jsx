@@ -14,12 +14,12 @@ const ViewPostPage = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/posts');
+        const response = await axios.get('https://instaposts-8r5m.vercel.app/api/posts');
         const foundPost = response.data.posts.find((p) => p.id === mediaId);
         if (!foundPost) throw new Error('Post not found');
         setPost(foundPost);
 
-        const commentsResponse = await axios.get(`http://localhost:5000/api/comments/${mediaId}`);
+        const commentsResponse = await axios.get(`https://instaposts-8r5m.vercel.app/api/comments/${mediaId}`);
         setComments(commentsResponse.data.comments);
       } catch (err) {
         setError('Failed to load post or comments');

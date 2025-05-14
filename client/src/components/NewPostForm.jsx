@@ -9,7 +9,7 @@ const NewPostForm = ({ onPostSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/publish', {
+      const response = await axios.post('https://instaposts-8r5m.vercel.app/api/publish', {
         imageUrl,
         caption,
       });

@@ -51,7 +51,7 @@ const PostsPage = () => {
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:5000/api/comments/${mediaId}`);
+      const response = await axios.get(`https://instaposts-8r5m.vercel.app/api/comments/${mediaId}`);
       setComments({ ...comments, [mediaId]: response.data.comments });
     } catch (err) {
       setError('Failed to load comments');

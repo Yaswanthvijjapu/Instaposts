@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/posts",
+      "destination": "https://your-backend.vercel.app/api/posts"
+    },
+    {
+      "source": "/api/comments/:mediaId",
+      "destination": "https://your-backend.vercel.app/api/comments/:mediaId"
+    },
+    {
+      "source": "/api/publish",
+      "destination": "https://your-backend.vercel.app/api/publish"
+    },
+    {
+      "source": "/api/profile",
+      "destination": "https://your-backend.vercel.app/api/profile"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Requested-With, Content-Type, Accept"
+        }
+      ]
+    }
+  ]
+}
