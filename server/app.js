@@ -8,6 +8,12 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 const { ACCESS_TOKEN } = process.env;
 
+app.use(cors({
+  origin: "https://igpostsdisplay.vercel.app",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["X-Requested-With", "Content-Type", "Accept"]
+}));
+
 if (!ACCESS_TOKEN) {
   console.error("Missing ACCESS_TOKEN");
   process.exit(1);
