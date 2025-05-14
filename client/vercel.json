@@ -12,19 +12,19 @@
   "rewrites": [
     {
       "source": "/api/posts",
-      "destination": "https://your-backend.vercel.app/api/posts"
+      "destination": "https://instaposts-8r5m.vercel.app/api/posts"
     },
     {
       "source": "/api/comments/:mediaId",
-      "destination": "https://your-backend.vercel.app/api/comments/:mediaId"
+      "destination": "https://instaposts-8r5m.vercel.app/api/comments/:mediaId"
     },
     {
       "source": "/api/publish",
-      "destination": "https://your-backend.vercel.app/api/publish"
+      "destination": "https://instaposts-8r5m.vercel.app/api/publish"
     },
     {
       "source": "/api/profile",
-      "destination": "https://your-backend.vercel.app/api/profile"
+      "destination": "https://instaposts-8r5m.vercel.app/api/profile"
     },
     {
       "source": "/(.*)",
@@ -37,11 +37,11 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*"
+          "value": "https://igpostsdisplay.vercel.app"
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
+          "value": "GET, POST, OPTIONS"
         },
         {
           "key": "Access-Control-Allow-Headers",
